@@ -1,0 +1,99 @@
+$Steps: "xy-steps";
+$Step: "xy-step";
+$--primary-color: #1890ff !default;
+
+.#{$Steps} {
+    width: 100%;
+    display: flex;
+
+    &.#{$Steps}-direction-vertical {
+        display: block;
+    }
+}
+
+/* 垂直方向 */
+.#{$Steps}:not(.#{$Steps}-direction-vertical) {
+    .#{$Step} {
+        margin-right: 16px;
+        white-space: nowrap;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .#{$Step}-descriptionn {
+        max-width: 140px;
+    }
+    .#{$Step}-tail {
+        display: none;
+    }
+}
+.#{$Steps}-direction-vertical {
+    display: block;
+    .#{$Step}-tail {
+        position: absolute;
+        left: 16px;
+        top: 3px;
+        height: 100%;
+        width: 1px;
+        padding: 34px 0 6px;
+
+        &:after {
+            height: 100%;
+            width: 1px;
+        }
+
+        &:not(:last-child) {
+            display: block;
+        }
+    }
+    .#{$Step} {
+        display: block;
+        overflow: visible;
+
+        &:last-child {
+            flex: none;
+
+            .#{$Step}-tail {
+                display: none;
+            }
+        }
+
+        .#{$Step}-icon {
+            float: left;
+            margin-right: 16px;
+        }
+        .#{$Step}-content {
+            min-height: 48px;
+            overflow: hidden;
+            display: block;
+        }
+        .#{$Step}-title {
+            line-height: 32px;
+            &:after {
+                display: none;
+            }
+        }
+        .#{$Step}-description {
+            padding-bottom: 12px;
+        }
+    }
+}
+
+/* 尺寸 */
+.#{$Steps}-size-small {
+    .#{$Step}-icon {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+}
+.#{$Steps}-size-large {
+    .#{$Step}-icon {
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 25px;
+    }
+}

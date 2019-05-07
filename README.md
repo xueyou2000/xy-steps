@@ -10,37 +10,50 @@
 
 # xy-steps
 
-基于`React Hooks` + `typescript`的基础组件
+步骤条组件
 
 ## 安装
 
 ```bash
 # yarn
-yarn add xy-steps
+yarn add xy-steps classnames @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
 ```
 
 ## 使用例子
 
-```ts
+```tsx
 import React from "react";
 import ReactDOM from "react-dom";
-import XySteps from "xy-steps";
-ReactDOM.render(<XySteps />, container);
+import { Steps, Step } from "xy-steps";
+ReactDOM.render(
+    <Steps step={2}>
+        <Step title="Finished">This is a description.</Step>
+        <Step title="In Progress">This is a description.</Step>
+        <Step title="Waiting">This is a description.</Step>
+    </Steps>,
+    container
+);
 ```
 
 ## API
 
-| 属性     | 说明                                                               | 类型           | 默认值    |
-| -------- | ------------------------------------------------------------------ | -------------- | --------- |
-| ghost    | 幽灵属性，使按钮背景透明                                           | boolean        | false     |
-| long     | 是否长按钮                                                         | boolean        | false     |
-| icon     | 设置按钮的图标类型                                                 | IconDefinition | -         |
-| loading  | 设置按钮载入状态                                                   | boolean        | `false`   |
-| disabled | 按钮失效状态                                                       | boolean        | `false`   |
-| shape    | 设置按钮形状，可选值为 `circle` 或者不设                           | string         | -         |
-| size     | 设置按钮大小，可选值为 `small` `large` 或者不设                    | string         | `default` |
-| type     | 设置按钮类型，可选值为 `primary` `dashed` `text` `danger` 或者不设 | string         | -         |
-| onClick  | `click` 事件的 handler                                             | function       | -         |
+### Steps
+
+| 属性      | 说明                                                               | 类型   | 默认值     |
+| --------- | ------------------------------------------------------------------ | ------ | ---------- |
+| step      | 当前步骤, 从数字 1 开始                                            | number | 1          |
+| status    | 当前步骤状态, 可选值为 `wait` `process` `finnish` `error` 或者不设 | string | -          |
+| direction | 方向, 可选值为 `horizontal` `vertical`                             | string | horizontal |
+| size      | 设置按钮大小，可选值为 `small` `large` 或者不设                    | string | default    |
+
+### Step
+
+| 属性     | 说明                    | 类型            | 默认值 |
+| -------- | ----------------------- | --------------- | ------ |
+| step     | 当前步骤, 从数字 1 开始 | number          | 1      |
+| title    | 步骤标题                | React.ReactNode | -      |
+| children | 步骤描述                | React.ReactNode | -      |
+| icon     | 步骤图标                | React.ReactNode | -      |
 
 ## 开发
 

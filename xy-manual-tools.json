@@ -1,7 +1,27 @@
 [
     {
         "name": "Simple",
-        "title": "简答例子",
-        "desc": "简答例子的一段描述。"
+        "title": "基本使用",
+        "desc": "最简单的步骤条。"
+    },
+    {
+        "name": "CustomIcon",
+        "title": "自定义图标",
+        "desc": "设置 icon 属性，自定义步骤图标。"
+    },
+    {
+        "name": "Vertical",
+        "title": "垂直显示",
+        "desc": "设置 direction 属性为 vertical 将垂直显示步骤条。"
+    },
+    {
+        "name": "Size",
+        "title": "不同尺寸",
+        "desc": "支持 default, small, large 3中尺寸。"
+    },
+    {
+        "name": "Flow",
+        "title": "步骤切换",
+        "desc": "通常配合内容及按钮使用，表示一个流程的处理进度。"
     }
 ]
