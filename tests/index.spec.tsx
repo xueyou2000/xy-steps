@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { Steps, Step } from "../src";
 
 describe("Steps", () => {
@@ -9,7 +9,7 @@ describe("Steps", () => {
                 <Step title="Finished">This is a description.</Step>
                 <Step title="In Progress">This is a description.</Step>
                 <Step title="Waiting">This is a description.</Step>
-            </Steps>
+            </Steps>,
         );
         const stepList = wrapper.container.querySelectorAll(".xy-step") as NodeListOf<HTMLElement>;
         expect(stepList[0].classList.contains("xy-step-status-process")).toBeTruthy();
@@ -23,7 +23,7 @@ describe("Steps", () => {
                 <Step title="Finished">This is a description.</Step>
                 <Step title="In Progress">This is a description.</Step>
                 <Step title="Waiting">This is a description.</Step>
-            </Steps>
+            </Steps>,
         );
         const stepList = wrapper.container.querySelectorAll(".xy-step") as NodeListOf<HTMLElement>;
         expect(stepList[0].classList.contains("xy-step-status-finnish")).toBeTruthy();
@@ -37,7 +37,7 @@ describe("Steps", () => {
                 <Step title="Finished">This is a description.</Step>
                 <Step title="In Progress">This is a description.</Step>
                 <Step title="Waiting">This is a description.</Step>
-            </Steps>
+            </Steps>,
         );
         const stepList = wrapper.container.querySelectorAll(".xy-step") as NodeListOf<HTMLElement>;
         expect(stepList[0].classList.contains("xy-step-status-finnish")).toBeTruthy();

@@ -16,7 +16,7 @@
 
 ```bash
 # yarn
-yarn add xy-steps classnames @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+yarn add xy-steps
 ```
 
 ## 使用例子
@@ -31,7 +31,7 @@ ReactDOM.render(
         <Step title="In Progress">This is a description.</Step>
         <Step title="Waiting">This is a description.</Step>
     </Steps>,
-    container
+    container,
 );
 ```
 
