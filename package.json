@@ -1,6 +1,6 @@
 {
     "name": "xy-steps",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "description": "基于 React Hooks 的步骤条组件",
     "types": "es/index.d.ts",
     "main": "es/index.js",
@@ -42,14 +42,14 @@
         "@types/react": "16.9.2",
         "@types/react-dom": "16.9.0",
         "quick-react-scripts": "^1.2.2",
-        "xy-manual-tools": "^0.1.65"
+        "xy-manual-tools": "^0.3.0"
     },
     "dependencies": {
         "@fortawesome/free-solid-svg-icons": "^5.10.2",
         "@fortawesome/react-fontawesome": "^0.1.4",
         "classnames": "^2.2.6",
-        "react": "^16.9.0",
-        "react-dom": "^16.9.0"
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
     },
     "repository": {
         "type": "git",
